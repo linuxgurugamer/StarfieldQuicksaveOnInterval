@@ -1,0 +1,14 @@
+Changed new file name to begin with 100
+Added following new config values:
+	    int QuicksaveCount = 10,
+Added code to delete the oldest renamed quicksave files which exceed the QuicksaveCount
+Added code to rename all the renamed quicksave files to start with 1001
+Added Verbose level config
+	// Verbose level Def
+	//
+	// 0 = no output after initial settings
+	// 1 = normal output
+	// 2 = More verbose output, with full filenames, etc
+Modified Console.Writelines to not output the full path, but just the filename
+Added  display of all options when program starts
+Fixed bug which happened if program was looking at files at the moment a new save is being written, it initially gets a name ending in ".tmp"
